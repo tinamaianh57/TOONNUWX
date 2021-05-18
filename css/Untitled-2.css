@@ -1,0 +1,709 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "amatic-sc";
+}
+html {
+  scroll-behavior: smooth
+}
+@font-face {
+  src: url("../font/AmaticSC-Bold.ttf");
+  font-family: "amatic-sc"
+}
+.wrapper {
+  width: 100vw;
+  /*	background: white;*/
+}
+.intro {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  /*	background: pink*/
+}
+header {
+  width: 100vw;
+  height: 500px;
+  padding: 300px;
+  box-sizing: border-box;
+  /*	background: grey;*/
+  color: red;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+header h3 {
+  width: 50%;
+  font-size: 150px;
+  z-index: 30
+}
+.logo {
+  width: 5%;
+	padding-right: 50px;
+	min-width: 200px
+  /*	margin-left: 150px*/
+  /*	background: black*/
+}
+.logo img {
+  width: 50%;
+  margin: 0 auto;
+  min-width: 200px
+}
+nav {
+/*  	background: red;*/
+  width: 100%;
+  height: 100px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end
+}
+nav ul li {
+  font-size: 150px;
+  padding-left: 100px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: red;
+  font-weight: 1000;
+}
+nav ul li a:hover {
+  color: yellow;
+  font-size: 200px
+}
+main {
+  width: 100vw;
+  height: 100%;
+  /*	background: blue;*/
+  position: relative;
+  overflow: hidden
+}
+.banner {
+  width: 100%;
+  height: 100vh;
+  background: #0D0202;
+  overflow: hidden
+}
+.banner video {
+  width: 100%;
+  opacity: 0.2
+}
+.char {
+	min-width: 1500px;
+  margin-left: 35%;
+  width: 35%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  /*	background: red;*/
+  top: 0%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  animation: char 1s infinite linear alternate
+}
+.char img {
+  width: 100%
+}
+.eye1 {
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  top: 20%;
+  padding-left: 1000px;
+  animation: eye 1s infinite linear alternate
+}
+.eye1 img {
+  width: 100%
+}
+.eye2 {
+  width: 25%;
+  height: 50%;
+  position: absolute;
+  top: 0%;
+  right: 15%;
+  animation: eye2 1s infinite linear alternate
+}
+.eye2 img {
+  width: 100%
+}
+.eye3 {
+  width: 50%;
+  height: 40%;
+  /*	background: red;*/
+  position: absolute;
+  bottom: 0;
+  animation: eye3 1s infinite linear alternate
+}
+.eye3 img {
+  height: 100%
+}
+.eye4 {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  /*	background: red;*/
+  bottom: 0;
+  text-align: end;
+  animation: eye3 1s infinite linear alternate
+}
+.eye4 img {
+  width: 40%;
+  height: 100%
+}
+@keyframes eye3 {
+  from {
+    transform: translateY(0px)
+  }
+  to {
+    transform: translateY(100px)
+  }
+}
+@keyframes eye {
+  from {
+    transform: translate(0px, 50px) rotate(-10deg)
+  }
+  to {
+    transform: translate(100px, -200px) rotate(10deg)
+  }
+}
+@keyframes eye2 {
+  from {
+    transform: translate(0px, -50px) rotate(10deg)
+  }
+  to {
+    transform: translate(300px, 300px) rotate(-10deg)
+  }
+}
+@keyframes char {
+  from {
+    transform: translateY(0px) rotate(-6deg)
+  }
+  to {
+    transform: translateY(200px)rotate(6deg)
+  }
+}
+.roll {
+  width: 100vw;
+  height: 200px;
+  background: red;
+  position: absolute;
+  bottom: 0;
+  opacity: 0.8;
+  border-left: none;
+  border-right: none;
+  padding: 5px 0 10px 0;
+  box-sizing: border-box;
+}
+.text {
+  width: 200%;
+  font-size: 150px;
+  font-weight: 3000;
+  display: flex;
+  justify-content: flex-start;
+  white-space: nowrap;
+  animation: roll 15s infinite linear
+}
+@keyframes roll {
+  from {
+    transform: translateX(0)
+  }
+  to {
+    transform: translateX(-50%)
+  }
+}
+.sticky {
+/*  	background:white;*/
+  width: 10%;
+  height: 70%;
+  position: fixed;
+	z-index: 500;
+  top: 0;
+  right: 0;
+	bottom: 0;
+	margin-top: 600px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.sticky a {
+  font-size: 150px;
+  text-decoration: none;
+  color: yellow;
+  border: 10px solid yellow;
+  padding: 20px 40px;
+  border-radius: 50%;
+  animation: top 3s linear infinite
+}
+.sticky a:hover {
+  color: red;
+  border-color: red
+}
+@keyframes top {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+.about {
+  width: 100vw;
+  height: 90vh;
+  /*	background: red*/
+}
+.container {
+  width: 100%;
+  height: 90vh;
+  background: black;
+  display: flex;
+}
+.background {
+  width: 100%;
+  position: relative;
+}
+.background video {
+	width: 100%;
+  height: 100%;
+  opacity: 0.4
+}
+.left {
+/*	padding: 0 300px;*/
+  width: 65%;
+  height: 100%;
+  top: 0;
+/*  	background: grey;*/
+	left: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+	align-items: center;
+  padding:300px;
+	line-height: 1300px
+
+}
+.whatido {
+	line-height: 1500px;
+	min-width: 3000px;
+	min-height:  3500px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  /*	background: red;*/
+  font-size: 1000px;
+  position: absolute;
+  padding: 0px 300px;
+  box-sizing: border-box;
+  -webkit-text-stroke-width: 10px;
+  -webkit-text-stroke-color: yellow;
+  letter-spacing: 600px;
+}
+.whatido-info {
+/*  	background: grey;*/
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  z-index: 50;
+  color: red;
+  font-size: 300px;
+  padding: 300px 0px;
+  box-sizing: border-box;
+  /*	list-style: none;*/
+  top: 30%;
+	display: flex;
+	justify-content: flex-start;
+	align-content: center;
+	align-items: center
+}
+.whatido-info ul {
+  display: flex;
+	justify-content: flex-start
+}
+.whatido-info ul li {
+  padding-left: 300px;
+  list-style: none;
+}
+.whatido-info ul li a {
+  color: red;
+  text-decoration: underline
+}
+.whatido-info ul li a:hover {
+  text-decoration: line-through;
+}
+.right {
+  padding: 300px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+/*  	background: grey;*/
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.logo-anim {
+  height: 90%
+}
+.logo-anim img {
+  height: 90%;
+  animation: logo 11s linear infinite
+}
+@keyframes logo {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+.roll2 {
+  width: 100vw;
+  height: 200px;
+  background: red;
+  position: absolute;
+z-index: 150;
+  bottom: 0;
+  border-left: none;
+  border-right: none;
+  padding: 5px 0 10px 0;
+  box-sizing: border-box;
+  overflow: hidden
+}
+.about2 {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  overflow: hidden
+}
+.cloud {
+  opacity: 0.5;
+  width: 20%;
+  height: 100%;
+  /*	background: black;*/
+  position: absolute;
+  /*	top: 0;*/
+  /*	right: 0;*/
+  animation: cloud 10s linear infinite
+}
+.cloud2 {
+opacity: 0.5;
+  width: 80%;
+  height: 100%;
+  /*	background: black;*/
+  /*	position: absolute;*/
+  /*	top: 0;*/
+  /*	right: 0;*/
+  animation: cloud 10s linear infinite
+}
+.cloud3 {
+	opacity: 0.5;
+  width: 20%;
+  height: 70%;
+  /*	background: black;*/
+  position: absolute;
+  /*	top: 0;*/
+  bottom: 0;
+  animation: cloud3 10s linear infinite
+}
+.cloud3 img {
+  width: 70%
+}
+.cloud2 img {
+  width: 30%;
+}
+@keyframes cloud3 {
+  from {
+    transform: translateX(-5000px) rotate(0)
+  }
+  to {
+    transform: translateX(5000px) rotate(360deg)
+  }
+}
+@keyframes cloud {
+  from {
+    transform: translate(5000px, -1000px) rotate(360deg)
+  }
+  to {
+    transform: translate(-5000px, -1200px) rotate(0)
+  }
+}
+
+.timeline{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+/*	background: black;*/
+	display: flex;
+	justify-content: center;
+	align-items: center
+	
+}
+.timeline img{
+	height:100%;
+}
+.pencil{
+	width: 5%;
+	height: 50%;
+	position: absolute;
+	right:1900px;
+	top: 500px;
+	z-index: 100
+}
+.pencil img{
+	width: 100%;
+	animation: pencil 0.2s infinite linear alternate
+}
+@keyframes pencil{
+	from{
+		transform: rotate(-5deg)
+	}
+	to{
+		transform: rotate(5deg)
+	}
+}
+.background2{
+	width: 100%;
+	height: 100%;
+	position: absolute}
+.background2 video{
+	width: 100%;
+	height: 100%;
+	opacity: 0.2
+}
+
+.portfolio{
+	width: 100vw;
+	height: 100vh;
+	background: black;
+	position: relative;
+}
+.bot {
+  width: 100%;
+  height: 200px;
+  background: red;
+  border-left: none;
+  border-right: none;
+  padding: 5px 0 10px 0;
+  box-sizing: border-box;
+overflow: hidden;
+	position: absolute;
+top: 0}
+.portcontainer{
+	width: 100%;
+	height: 100%;
+	padding: 600px 300px;
+	box-sizing: border-box
+}
+.portlist{
+	width: 100%;
+	height: 100%;
+/*	background: red*/
+}
+.portlist ul{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	widows: 100%;
+	height: 100%;
+}
+.portlist ul li{
+	width: 33.33%;
+	height: 100%;
+	background: black;
+	margin-right: 100px;
+}
+.portimg1{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding: 100px;
+	box-sizing: border-box;
+	overflow: hidden
+}
+.portimg1 img{
+	height: 110%;
+	opacity: 0.2
+	
+}
+.portimg2{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding: 0px 100px;
+	box-sizing: border-box;
+	overflow: hidden
+}
+.portimg2 img{
+	height: 100%;
+	opacity: 0.2
+}
+.portimg3{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+/*	padding: 100px;*/
+	box-sizing: border-box
+}
+.portimg3 img{
+	width: 100%;
+	opacity:0.2}
+.button{
+	width: 15%;
+	height: 10%;
+	background: red;
+	position: absolute;
+	z-index: 50;
+	border-radius: 500px;
+	color: black;
+	text-align: center;
+	font-size: 200px;
+	display: flex;
+	justify-content: center;align-content: center;
+	align-items: center
+}
+.button a{
+	text-decoration: none;
+	color: black
+}
+.button a:hover{
+	background: black;
+	color: red;
+	padding: 40px 250px;
+	border-radius:500px
+}
+.contact{
+	width: 100vw;
+	height: 100vh;
+	background: black;
+	
+}
+.contcont{
+	width: 100%;
+	height: 100%;
+	padding: 300px;
+	box-sizing: border-box;
+	display: flex;
+	position: relative;
+/*	background: red*/;
+	overflow: hidden
+}
+.contleft{
+	width: 40%;
+	height: 80%;
+/*	background: white;*/
+	margin-right: 100px
+}
+.contright{
+	width: 40%;
+	height: 100%;
+/*	background: grey;*/
+	margin-left: 1000px
+	
+}
+input[type=text], select, textarea{
+  width: 100%;
+	height: 150px;/* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc;  
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px;
+font-size: 100px;/* Bottom margin */
+  resize: vertical
+}
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+	width: 50%;
+	height: 200px;
+	font-size: 100px;
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: red;
+}
+
+/* Add a background color and some padding around the form */
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	color: white;
+	width: 100%;
+	height: 100%;
+  border-radius: 5px;
+/*  background-color: #f2f2f2;*/
+  padding: 20px;
+	font-size: 150px
+}
+.background3{
+	width: 100%;
+	height: 100%;
+	position: absolute
+}
+.background3 video{
+	width: 100%;
+	height: 100%;
+	opacity: 0.3
+}
+.lefttext{
+/*	background: white;*/
+	width: 100%;
+	height: 100%;
+	font-size: 300px;
+	color: red
+}
+.line{
+	width: 80%;
+	height: 10px;
+	background: red
+}
+.email{
+	width: 100%;
+	height: 100%;
+/*	background: red;*/
+	display: flex
+	
+	
+}
+.icon{
+	float: left;
+/*	margin-top: 30%;*/
+	color: red;
+	font-size: 300px;
+	margin-right: 200px;
+	opacity: 0.5
+}
